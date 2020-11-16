@@ -2,7 +2,7 @@
 
 The California Housing Dataset was used to perform the tasks.
 
-[California Housing Dataset](‘https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html (Links to an external site’))
+[California Housing Dataset](`https://scikit-learn.org/stable/modules/generated/sklearn.datasets.fetch_california_housing.html (Links to an external site’))
 
 ### Predicting the value of homes
 
@@ -16,9 +16,9 @@ To properly get the analyzed data, we looped over the different activations, the
 
 This generated 384 different models.
 
-The Adam was used as a solver, as it was able to manage larger datasets compared to ’lbfgs’ or ‘sgd’ since it was a definite possibility to increase the maximum iteration to obtain similar results.
+The Adam was used as a solver, as it was able to manage larger datasets compared to `lbfgs` or `sgd` since it was a definite possibility to increase the maximum iteration to obtain similar results.
 
-When comparing each model, we used R^2, Train Loss, Test MSE, and Time Taken. The result was saved into the CSV file, as the execution took at least 14 minutes, even with the TPU from the Google Colab.
+When comparing each model, we used $R^2$, Train Loss, Test MSE, and Time Taken. The result was saved into the CSV file, as the execution took at least 14 minutes, even with the TPU from the Google Colab.
 
 **Result**
 
@@ -30,9 +30,12 @@ When it comes to the activation functions, identity and relu had way more errors
 
 From these two activations, tanh produced less errors in both hidden units 1 and 2.
 
-When comparing two activations on Test MSE, R^2, Train Loss, and Time Taken, it was clear that tanh with hidden units of 5 and 5 produced the best performance.
+When comparing two activations on Test MSE, $R^2$, Train Loss, and Time Taken, it was clear that tanh with hidden units of 5 and 5 produced the best performance.
 
-Overall, taken into consideration the metrics above, the best combination of the 384 is MLPRegressor(hidden_layer_sizes=(5, 5), activation='relu', solver='adam', alpha=0.001, learning_rate_init=0.1)
+Overall, taken into consideration the metrics above, the best combination of the 384 is 
+```python 
+MLPRegressor(hidden_layer_sizes=(5, 5), activation='relu', solver='adam', alpha=0.001, learning_rate_init=0.1)
+```
 
 
 ### Predicting the category of home values
@@ -59,7 +62,10 @@ The learning rates in the plot scatter; however, a learning rate of 0.1 is very 
 
 We used an intersection among vertical and horizontal lines that displayed the maximum value among accuracy, f1_value, precision, and recall.
 
-Through these intersection, we concluded that activation of identity and hidden units of 20 and 5 produced the best performance (i.e MLPClassifier(hidden_layer_sizes=(20, 5), activation='identity', solver='adam', alpha=0.0001, learning_rate_init=0.1))
+Through these intersection, we concluded that activation of identity and hidden units of 20 and 5 produced the best performance i.e 
+```python
+MLPClassifier(hidden_layer_sizes=(20, 5), activation='identity', solver='adam', alpha=0.0001, learning_rate_init=0.1)
+```
 
 # Reflection Questions
 
@@ -80,15 +86,20 @@ More applications of neural networks
 Making the classification data frame and assisting with the plots
 
 # Reflection Questions - Daniel
-**What do I believe I did well on this assignment?**   
+**What do I believe I did well on this assignment?**  
+Coming up with a structure to loop through different hyperparameters for our neural networks.
 
 **What was the most challenging part of this assignment?**  
+At one point, we tried to use classes to create a wrapper around seaborn and matplotlib. This was to help us apply default properties to our plots. This did not materialize.
 
 **What would have made this assignment a better experience?**  
+The flexibility to use a different DL framework like Tensorflow or Pytorch.
 
 **What do I need help with?**   
+To visualize the impact of different hyperparameters better, my team and I came up with the idea to use parallel coordinates plot. We couldn't get this implemented properly as we wanted.
 
-**Contribution**  
+**Contribution** 
+We truly did this together as a team. We spent two 6 hour sessions together on this project. My main contribution was coming up with the implementation to loop MLPRegressor through different hyperparameters and saving results for each iteration. 
 
 # Reflection Questions - Dong Hyun Jeon
 
