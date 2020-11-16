@@ -90,16 +90,23 @@ Making the classification data frame and assisting with the plots
 
 **Contribution**  
 
-# Reflection Questions - Ryan
-**What do I believe I did well on this assignment?**  
+# Reflection Questions - Dong Hyun Jeon
 
-**What was the most challenging part of this assignment?**  
+**What do I believe I did well on this assignment?**
+But mostly, my team and I did amazing job getting head together to get better solution and result. 
 
-**What would have made this assignment a better experience?**  
+**What was the most challenging part of this assignment?**
+Understanding why different activation, learning rate, and alpha provided different result.
+
+**What would have made this assignment a better experience?**
+A better understanding of neural networks.
 
 **What do I need help with?**
+This was just an introduction to basic neural network programming. As I go deeper into this, there will be larger stacks of information that I need to have knowledge of. Having a guideline to be good at programming in neural network topic would be great.
 
 **Contribution**
+Cleaning and organizing with correct data types. Creating classes(tried to) and helper functions. Plotting the data in the right manner, and analyzing the results.
+
 
 ## License
 
